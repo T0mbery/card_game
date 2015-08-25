@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th> Карты: </th>
+    <th width="100px" height="40px"> Название: </th>
+    <th width="100px" height="40px"> Цена: </th>
+    <th width="100px" height="40px"> level: </th>
+    <th width="250px" height="40px"> Описание:</th>
+    <th></th>    
+  </tr>
+  
+  <% @card.each do |i| %> 
+  
+  <tr>
+    <td> <%= image_tag i.image.url(:thumb) %> </td>
+    <td> <%= link_to i.name, card_path(i) %> </td>
+    <td class="price"> <%= i.price.to_i %> монет </td>
+    <td class="lvl"> <%= i.lvl.to_i %>  </td>
+    <td class="description"> <%= i.description %>  </td>
+    <td> <%= button_to "Купить", line_items_path(card_id: i), class: "btn btn-warning" %></td>    
+  </tr>
+  <% end %>
+</table>

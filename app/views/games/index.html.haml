@@ -1,0 +1,24 @@
+%br
+.gameUser
+  - @cart.line_items.map do |item|
+    %p.ss= image_tag item.card.image.url(:thumb)    
+  
+.gamePlayer
+  - @card_game.each do |item|    
+    %p.ss= image_tag item.image.url(:thumb)
+
+.game
+  .game-one
+  .game-two
+  .game-three
+  .game-four
+  .game-five
+  .game-six
+  .game-seven
+  .game-eight
+  .game-nine
+        
+
+
+        
+

@@ -1,0 +1,36 @@
+// Place all the styles related to the Cards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form_name { width: 300px; margin: 2px 28px; }
+.form_image { margin: 2px 39px; }
+.form_image1_edit { margin-left: 124px; }
+.form_image1 { margin-left: 127px; }
+.form_price { width: 120px; margin: 2px 66px; }
+.form_lvl { margin: 2px 76px; text-align: right; }
+.form_description { width: 300px; text-align: right; margin: 2px 26px; }
+.form_button { }
+.form_number { width: 60px; margin: 2px 55px; }
+.cards { font-family: 'Lato', sans-serif; font-weight: bold; color: #FF4500; position: absolute; margin-top: 40px;}
+
+A { font-weight: bold; color: #1E90FF; }
+TABLE { background: #F5F5F5; border: 3px solid #000; margin-left: 20px; }
+h3, h1 { margin-left: 20px; }
+td, th { background: #F5F5F5; border: 1px solid #000; padding: 5px; text-align: center; }
+
+.price { font-weight: bold; color: #FF8C00; }
+.lvl { font-weight: bold; color: #FF8C00; }
+.description { font-weight: bold; color: #FF8C00; }
+.new_card { margin-left: 20px; }
+#show { font-size: 17px; font-weight: bold; }
+.butt { margin-left: 28px; }
+
+.sessionInfo { padding: 15px; width: 100%; background: #9ACD32; font-family: 'Lato', sans-serif; font-weight: bold; color: white; a { color: white; }}
+.headerOne { display: inline; margin-left: 300px; border: 2px solid white; padding: 5px 25px; border-radius: 3px; }  
+.headerTwo { display: inline; margin-left: 100px; border: 2px solid white; padding: 5px 25px; border-radius: 3px; }
+.headerThree { display: inline; margin-left: 100px; border: 2px solid white; padding: 5px 25px; border-radius: 3px; }
+
+.money { margin: 25px 0px 0px 567px; border: 3px solid black; width: 253px; background: #98FB98; border-radius: 20px; }
+.moneyOne { font-weight: bold; color: #FF4500; }
+.moneyShow { margin: 20px; border: 3px solid black; width: 253px; background: #98FB98; border-radius: 20px; }
+

@@ -1,0 +1,35 @@
+%br
+.gameUser
+  - @cart.line_items.map do |item|
+    - @card_one   = @cart.line_items.take(1).last
+    - @card_two   = @cart.line_items.take(2).last 
+    - @card_three = @cart.line_items.take(3).last 
+    - @card_four  = @cart.line_items.take(4).last 
+    - @card_five  = @cart.line_items.take(5).last
+    - @card_six   = @cart.line_items.take(6).last
+    - @card_seven = @cart.line_items.take(7).last
+    - @card_eight = @cart.line_items.take(8).last
+    - @card_nine  = @cart.line_items.take(9).last
+    - @card_ten   = @cart.line_items.take(10).last
+            
+    %p.ss= image_tag item.card.image.url(:thumb)    
+  
+.gamePlayer
+  - @card_game.each do |item|    
+    %p.ss= image_tag item.image.url(:thumb)
+
+.game
+  .game-one
+  .game-two
+  .game-three
+  .game-four
+  .game-five
+  .game-six
+  .game-seven
+  .game-eight
+  .game-nine
+        
+
+
+        
+

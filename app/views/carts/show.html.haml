@@ -1,0 +1,18 @@
+%p#notice= notice
+%p#alert= alert
+      
+.cart
+  = link_to 'Начать набор коллоды заного', cart_path(@cart), :method => :delete, data: {confirm: "Вы уверены?"}, class: "btn btn-info"
+  %br
+  %br
+
+  - @cart.line_items.each do |item|
+    = image_tag item.card.image.url(:thumb)
+  = link_to 'Набрать Карту', cards_path, class: "btn btn-warning"
+  
+- if user_signed_in?
+  .moneyShow
+    %h3.moneyOne
+      У Вас: #{session[:money]} монет
+      
+%p.gameButton= link_to "ИГРАТЬ", games_path, class: "btn btn-default"

@@ -1,0 +1,19 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.rule { font-family: 'Lato', sans-serif; font-weight: bold; color: #FF4500; margin-left: 29px; }
+
+.rule-descr { 
+    li {font-family: 'Lato', sans-serif; font-weight: lighter; }    
+    }
+
+.main { width: 100%; text-align: center; }
+.main-two { width: 100%; text-align: center; margin-top: 720px; }      
+      
+.main-descr { font-family: 'Lato', sans-serif; font-weight: bold; color: #EE7600; font-size: 55px; }
+.main-descr-two { font-family: 'Lato', sans-serif; font-weight: bold; color: #EE7600; font-size: 15px; }
+
+.body-main { background-image: url("ff88.jpg"); background-repeat: no-repeat; background-size: 65%; background-position: top center; }
+
+#ff8 { color: #FF4500; }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CardGame</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="body">
+
+<div class="adminPanel">
+  <div class="adminPanelDiscr">
+    <h4> ADMIN  </h4>
+  </div>
+  <div class="adminPanelButten" >
+    <%= link_to "Панель Администратора", "admin", class: "btn btn-default" %>
+  </div>
+</div>
+
+<div>
+  <% if user_signed_in? %>
+    Вы вошли как <%= current_user.name.capitalize %>.
+    <%= link_to "Выход", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Зарегистрироваться", new_user_registration_path %> или <%= link_to "Войти", new_user_session_path %>
+    <% end %>
+</div>
+ 
+<%= yield %>
+
+</body>
+</html>

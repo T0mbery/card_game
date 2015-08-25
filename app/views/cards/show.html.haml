@@ -1,0 +1,16 @@
+%h1= @card.name
+
+%ul
+  %li= image_tag @card.image.url(:large)
+  %br
+  %li
+    %span#show Цена:
+    #{@card.price.to_i} монет
+  %br
+  %li
+    %span#show Описание: 
+    #{@card.description} 
+  %br
+  
+%p.butt= link_to "Таблица всех карт", card_path(@cards), class: "btn btn-default"
+

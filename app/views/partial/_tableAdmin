@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th> Карты: </th>
+    <th width="100px" height="40px"> Название: </th>
+    <th width="100px" height="40px"> Цена: </th>
+    <th width="100px" height="40px"> level: </th>
+    <th width="250px" height="40px"> Описание:</th>    
+    <th></th>
+    <th width="100px" height="40px"></th>
+  </tr>
+  
+  <% @card.each do |i| %> 
+  
+  <tr>
+    <td> <%= image_tag i.image.url(:thumb) %> </td>
+    <td> <%= link_to i.name, card_path(i) %> </td>
+    <td class="price"> <%= i.price.to_i %> монет </td>
+    <td class="lvl"> <%= i.lvl.to_i %>  </td>
+    <td> <%= i.description %>  </td>    
+    <td> <%= link_to "Редактировать", edit_card_path(i.id), class: "btn btn-info" %></td>
+    <td> <%= link_to "Удалить", i, method: :delete, data: {confirm: "Точно удалить"}, class: "btn btn-warning" %> </td>
+  </tr>
+  <% end %>
+</table>

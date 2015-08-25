@@ -1,0 +1,67 @@
+<h1> Список карт </h1>
+
+<p class="new_card"><%= link_to "Создать новую карту", card_path("new"), class: "btn btn-default" %></p>
+
+<% if @cards.empty? %>
+  <b> Карты не добавлены <b> 
+<% else %>
+  <% if @cardsTen %>
+    <% @card = @cardsTen %>            
+      <h3> 10 lvl </h3>    
+        <div>
+          <table>          
+            <%= render partial: "partial/tableAdmin" %>                          
+          </table>
+        </div>     
+  <% end %>
+  
+  <% if @cardsNine %>
+    <% @card = @cardsNine %>             
+      <h3> 9 lvl </h3>    
+        <div>
+          <table>
+            <%= render partial: "partial/tableAdmin" %>                            
+          </table>
+        </div> 
+  <% end %>
+  
+  <% if @cardsEight %>
+    <% @card = @cardsEight %>             
+      <h3> 8 lvl </h3>    
+        <div>
+          <table>
+            <%= render partial: "partial/tableAdmin" %>                        
+          </table>
+        </div>
+  <% end %>
+  
+  <% if @cardsSeven %> 
+    <% @card = @cardsSeven %>            
+      <h3> 7 lvl </h3>    
+        <div>
+          <table>
+            <%= render partial: "partial/tableAdmin" %>                           
+          </table>
+        </div>
+  <% end %>
+  
+  <% if @cardsSix %>
+    <% @card = @cardsSix %>            
+      <h3> 6 lvl </h3>    
+        <div>
+          <table>
+            <%= render partial: "partial/tableAdmin" %>       
+          </table>
+        </div>  
+  <% end %>
+  
+  <% if @cardsFive %> 
+    <% @card = @cardsFive %>            
+      <h3> 5 lvl </h3>    
+        <div>
+          <table>
+            <%= render partial: "partial/tableAdmin" %>                          
+          </table>
+        </div>
+  <% end %>  
+<% end %>

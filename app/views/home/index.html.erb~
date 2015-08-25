@@ -1,0 +1,12 @@
+
+<div class="main">
+  <h1 class="main-descr"> Final Fantasy VIII</h1>
+</div>
+
+<div class="main-two">
+  <p class="main-descr-two"> Добро пожаловать на наш сайт !</p>
+  <p class="main-descr-two"> Он посвещён карточной игре из легендарной игры Final Fantasy VIII </p>
+  <p class="main-descr-two"> Чтобы узнать как пользоваться сайтом, прочитайте <%= link_to "Правила!", home_show_path %> </p>
+
+</div>
+
