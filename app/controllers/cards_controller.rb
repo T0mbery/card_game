@@ -9,7 +9,7 @@ class CardsController < ApplicationController
       @cards      = Card.all      
       redirect_to controller: 'Administrator'      
     else      
-      @cards      = Card.all
+      @cards       = Card.all
       @cards_ten   = Card.where(lvl: '10')
       @cards_nine  = Card.where(lvl: '9')
       @cards_eight = Card.where(lvl: '8')

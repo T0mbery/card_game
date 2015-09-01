@@ -25,7 +25,8 @@ module CardGame
         :address              => "smtp.gmail.com",
         :domain               => "gmail.com",
         :port                 => 587,
-
+        :user_name            => "drtombery@gmail.com",
+        :password             => "1234qwer",
         :authentication       => "plain",
         :enable_starttls_auto => true
     }        

@@ -1,11 +1,27 @@
 
-.adminPanel { width: 100%; margin-bottom: 1em; background-color: #1E90FF; padding-bottom: 5em; }
+.adminPanel { 
+  width: 100%; 
+  margin-bottom: 1em; 
+  background-color: #1E90FF; 
+  padding-bottom: 5em;
+}
+
 h4 { font-weight: bold; }
 
 .body { background: linear-gradient(to right, #FFFACD 15%, #DEB887 85%); }
 
-.adminPanelButten { float: right; padding-top: 1em; margin-right: 40px; }
-.adminPanelDiscr  { width: 40%; color: #fff; float: left; padding-top: 1em; margin-left: 40px; }
+.adminPanelButten { 
+  float: right; 
+  padding-top: 1em; 
+  margin-right: 40px; 
+}
+.adminPanelDiscr {
+  width: 40%; 
+  color: #fff; 
+  float: left; 
+  padding-top: 1em; 
+  margin-left: 40px; 
+}
 
 .form-inputs {
     label {
@@ -17,7 +33,7 @@ h4 { font-weight: bold; }
     width: 250px;
     
     .hint { position: absolute; margin-left: 68px; }
-  }
+ }
   
 #special { margin-left: 160px; }
  

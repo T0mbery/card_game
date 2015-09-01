@@ -1,6 +1,38 @@
-<h1>Editing card</h1>
+<h1> Отредактировать карту </h1> <br/>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @card %> |
-<%= link_to 'Back', cards_path %>
+<% simple_form_for @card, html: { multipart: true} do |f| %>
+  
+  <div class="form_image">
+  <p><%= f.input :image, label: "Картинка" %></p>
+  </div>
+  <div class="form_image1_edit">
+  <p><%= image_tag @card.image.url(:large) %> <br/></p>
+  </div>
+  <div class="form_name">
+  <p><%= f.input :name, label: "Название" %> </p>
+  </div>
+  <div class="form_price">
+  <p><%= f.input :price, label: "Цена" %> </p>
+  </div>
+  <div class="form_lvl">
+  <p><%= f.input :lvl, label: "lvl", collection: 5..10, as: :radio_buttons %> </p><br/>
+  </div>  
+  <div class="form_number">
+  <p><%= f.input :left_number, label: "Цифра слева", collection: 1..10 %> </p>
+  </div>
+  <div class="form_number">
+  <p><%= f.input :top_number, label: "Цифра сверху", collection: 1..10 %> </p>
+  </div>
+  <div class="form_number">
+  <p><%= f.input :right_number, label: "Цифра справа", collection: 1..10 %> </p>
+  </div>
+  <div class="form_number">
+  <p><%= f.input :bottom_number, label: "Цифра снизу", collection: 1..10 %> </p>
+  </div>  
+  <div class="form_description">
+  <p><%= f.input :description, label: "Описание", :as => :text %> </p>
+  </div>
+  <div class="form_button">
+  <p><%= f.button :submit, 'Редактировать карту', class: "btn btn-success" %></p>
+  </div>
+<% end %>

@@ -1,13 +1,13 @@
 class GamesController < ApplicationController
 
   before_filter :authenticate_user! 
-  before_action :render_404, except: [:index] 
+  before_action :render_404, except: [:index]   
 
   respond_to :html
 
   def index
     @cart = Cart.find(session[:cart_id])
-    rand_cards
+    rand_cards    
   rescue ActiveRecord::RecordNotFound
     render file: "public/game_not_exist.html", status: 404         
   end
@@ -21,7 +21,7 @@ class GamesController < ApplicationController
   def edit
   end
 
-  def create
+  def create    
   end
 
   def update
@@ -31,6 +31,10 @@ class GamesController < ApplicationController
   end
   
   private
+  
+  def game_params
+    params.require(:game).permit(:image)
+  end
   
   def rand_cards
     card = Card.all

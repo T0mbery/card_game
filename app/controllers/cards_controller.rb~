@@ -1,5 +1,6 @@
 class CardsController < ApplicationController
 
+  before_filter :authenticate_user!
   before_filter :find_card,      only: [:show, :edit, :update, :destroy]
   before_filter :check_if_admin, only: [:edit, :update, :destroy, :new, :create]  
   
@@ -8,10 +9,10 @@ class CardsController < ApplicationController
       @cards      = Card.all      
       redirect_to controller: 'Administrator'      
     else      
-      @cards      = Card.all
+      @cards       = Card.all
       @cards_ten   = Card.where(lvl: '10')
       @cards_nine  = Card.where(lvl: '9')
-      @cards_eight = Card.where(lvl: '8')
+      @cards_eight = Card.ещёwhere(lvl: '8')
       @cards_seven = Card.where(lvl: '7')
       @cards_six   = Card.where(lvl: '6')
       @cards_five  = Card.where(lvl: '5')

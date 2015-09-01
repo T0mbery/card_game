@@ -13,7 +13,7 @@
     <div class="sessionInfo">
       <% if user_signed_in? %>             
         Вы вошли как <%= current_user.name.capitalize %>.
-        <%= link_to "Выход", destroy_user_session_path, :method => :delete %>    
+        <%= link_to "Выход", destroy_user_session_path, :method => :delete %>   
          <h2 class="headerOne"><%= link_to "Карты", cards_path %></h2>
          <h2 class="headerTwo"><%= link_to "Правила", home_show_path %></h2>
          <h2 class="headerThree"><%= link_to "Игра", games_path %></h2>

@@ -17,7 +17,7 @@
 <% else %>
   <% if @cards_ten %>
     <% @card = @cards_ten %>            
-      <h3> 10 level </h3>    
+      <h3 class="level"> 10 level </h3>    
         <div>
           <table>          
             <%= render partial: "partial/table" %>                          
@@ -27,7 +27,7 @@
   
   <% if @cards_nine %>
     <% @card = @cards_nine %>             
-      <h3> 9 level </h3>    
+      <h3 class="level"> 9 level </h3>    
         <div>
           <table>
             <%= render partial: "partial/table" %>                            
@@ -37,7 +37,7 @@
   
   <% if @cards_eight %>
     <% @card = @cards_eight %>             
-      <h3> 8 level </h3>    
+      <h3 class="level"> 8 level </h3>    
         <div>
           <table>
             <%= render partial: "partial/table" %>                        
@@ -47,7 +47,7 @@
   
   <% if @cards_seven %> 
     <% @card = @cards_seven %>            
-      <h3> 7 level </h3>    
+      <h3 class="level"> 7 level </h3>    
         <div>
           <table>
             <%= render partial: "partial/table" %>                           
@@ -57,7 +57,7 @@
   
   <% if @cards_six %>
     <% @card = @cards_six %>            
-      <h3> 6 level </h3>    
+      <h3 class="level"> 6 level </h3>    
         <div>
           <table>
             <%= render partial: "partial/table" %>       
@@ -67,7 +67,7 @@
   
   <% if @cards_five %> 
     <% @card = @cards_five %>            
-      <h3> 5 level </h3>    
+      <h3 class="level"> 5 level </h3>    
         <div>
           <table>
             <%= render partial: "partial/table" %>                          
