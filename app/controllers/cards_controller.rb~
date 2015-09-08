@@ -6,13 +6,13 @@ class CardsController < ApplicationController
   
   def index
     if current_user.admin?
-      @cards      = Card.all      
+      @cards      = Card.all     
       redirect_to controller: 'Administrator'      
     else      
-      @cards       = Card.all
+      @cards       = Card.where(["name LIKE ?","%#{params[:search]}%"]) 
       @cards_ten   = Card.where(lvl: '10')
       @cards_nine  = Card.where(lvl: '9')
-      @cards_eight = Card.ещёwhere(lvl: '8')
+      @cards_eight = Card.where(lvl: '8')
       @cards_seven = Card.where(lvl: '7')
       @cards_six   = Card.where(lvl: '6')
       @cards_five  = Card.where(lvl: '5')

@@ -7,7 +7,7 @@ class GamesController < ApplicationController
 
   def index
     @cart = Cart.find(session[:cart_id])
-    rand_cards    
+    @card_game = Card.find_by_sql("SELECT * FROM cards ORDER BY RANDOM() LIMIT 5")     
   rescue ActiveRecord::RecordNotFound
     render file: "public/game_not_exist.html", status: 404         
   end
@@ -34,16 +34,7 @@ class GamesController < ApplicationController
   
   def game_params
     params.require(:game).permit(:image)
-  end
-  
-  def rand_cards
-    card = Card.all
-    arr = [1, 2, 3, 4, 5] 
-    @card_game = arr.map do
-      @card_game = Card.find(rand(1..card.count))
-    end        
-  end
-  
+  end 
   
 end
 

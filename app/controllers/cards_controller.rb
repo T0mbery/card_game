@@ -6,7 +6,7 @@ class CardsController < ApplicationController
   
   def index
     if current_user.admin?
-      @cards      = Card.all      
+      @cards      = Card.all     
       redirect_to controller: 'Administrator'      
     else      
       @cards       = Card.all
