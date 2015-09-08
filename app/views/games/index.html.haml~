@@ -1,7 +1,5 @@
 %br
 .triangle-one
-.triangle-two
-%br
 
 .gameUser  
   - @cart.line_items.each do |item|    
@@ -11,16 +9,22 @@
   - @card_game.each do |item|    
     %p.ssComp{"data-top" => item.top_number, "data-right" => item.right_number, "data-bottom" => item.bottom_number, "data-left" => item.left_number, "data-user" => "2"}= image_tag item.image.url(:thumb)
 
+.triangle-two
+
 .game
-  .game-one
-  .game-two
-  .game-three
-  .game-four
-  .game-five
-  .game-six
-  .game-seven
-  .game-eight
-  .game-nine
+  .game-field{"data-id" => "0"}
+  .game-field{"data-id" => "1"}
+  .game-field{"data-id" => "2"}
+  .game-field{"data-id" => "3"}
+  .game-field{"data-id" => "4"}
+  .game-field{"data-id" => "5"}
+  .game-field{"data-id" => "6"}
+  .game-field{"data-id" => "7"}
+  .game-field{"data-id" => "8"}
+  
+
+  
+
 
   
         

@@ -39,7 +39,7 @@
   font-weight: bold; 
   color: #EE7600; 
   font-size: 15px;
-  text-shadow: .4px .4px .1px black; 
+  text-shadow: .2px .2px .1px black; 
  }
 
 .body-main { 
@@ -48,5 +48,19 @@
   background-size: 65%; 
   background-position: top center; 
  }
+ 
+.body { background: linear-gradient(to right, #FFFACD, #FFEFD5); }
 
 #ff8 { color: #FF4500; }
+
+
+
+
+
+
+
+
+
+
+
+

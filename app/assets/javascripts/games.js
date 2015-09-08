@@ -15,367 +15,152 @@ $(document).ready(function() {
   $('.ss').draggable({
     helper: 'clone',
     revert: 'invalid'
-  });
-  $('.game-one').droppable({
+  });  
+  
+  var q = 1;
+    
+  $('.game-field').droppable({
     activeClass: 'active-th',
     hoverClass: 'hover-th',
     drop: function(event, ui) {             
-      window.cardOne = ui.draggable;
-      $(this).prepend(cardOne);      
-      window.topNumOne = $(cardOne).data('top');
-      window.rightNumOne = $(cardOne).data('right');
-      window.bottomNumOne = $(cardOne).data('bottom');
-      window.leftNumOne = $(cardOne).data('left');      
-      /*
-          kod
-       */    
+      $card = $(ui.draggable);
+      $(this).prepend($card);             
+             
+      var right  = $('[data-id='+($(this).data('id')+1)+'] .ss').data('user') === 1 ? $('[data-id='+($(this).data('id')+1)+'] .ss') : $('[data-id='+($(this).data('id')+1)+'] .ssComp');            
+      var left   = $('[data-id='+($(this).data('id')-1)+'] .ss').data('user') === 1 ? $('[data-id='+($(this).data('id')-1)+'] .ss') : $('[data-id='+($(this).data('id')-1)+'] .ssComp');
+      var top    = $('[data-id='+($(this).data('id')-3)+'] .ss').data('user') === 1 ? $('[data-id='+($(this).data('id')-3)+'] .ss') : $('[data-id='+($(this).data('id')-3)+'] .ssComp');
+      var bottom = $('[data-id='+($(this).data('id')+3)+'] .ss').data('user') === 1 ? $('[data-id='+($(this).data('id')+3)+'] .ss') : $('[data-id='+($(this).data('id')+3)+'] .ssComp');
       
-      window.userOne = $(cardOne).data('user')
-      if (userOne === 1) {
-        cardOne.find('img').css({
-          'border': '10px solid #008B00',
-          'width': '150px',
-          'height': '150px'
-        }).animate({
-          'width': '100%',
-          'height': '100%'
-        });
-    } else {
-        cardOne.find('img').css({
-        'border': '10px solid #FF0000',
-        'width': '150px',
-        'height': '150px'
-        }).animate({
-        'width': '100%',
-        'height': '100%'
-        });
-      }      
-      cardOne.draggable('disable');
-      $(this).droppable('disable');
-    }
-  });
-  $('.game-two').droppable({
-    activeClass: 'active-th',
-    hoverClass: 'hover-th',
-    drop: function(event, ui) {
-      var card;
-      card = ui.draggable;
-      $(this).prepend(card);
-      window.topNumTwo = $(card).data('top');
-      window.rightNumTwo = $(card).data('right');
-      window.bottomNumTwo = $(card).data('bottom');
-      window.leftNumTwo = $(card).data('left');
-      window.userTwo = $(card).data('user');      
-      if (userTwo === 1) {
-        card.find('img').css({
-          'border': '10px solid #008B00',
-          'width': '150px',
-          'height': '150px'
-        }).animate({
-          'width': '100%',
-          'height': '100%'
-        });
-    } else {
-        card.find('img').css({
-        'border': '10px solid #FF0000',
-        'width': '150px',
-        'height': '150px'
-        }).animate({
-        'width': '100%',
-        'height': '100%'
-        });
-      }      
-      card.draggable('disable');
-      $(this).droppable('disable');
-    }
-  });
-  $('.game-three').droppable({
-    activeClass: 'active-th',
-    hoverClass: 'hover-th',
-    drop: function(event, ui) {      
-      window.cardThree = ui.draggable;
-      $(this).prepend(cardThree);
-      window.topNumThree = $(cardThree).data('top');
-      window.rightNumThree = $(cardThree).data('right');
-      window.bottomNumThree = $(cardThree).data('bottom');
-      window.leftNumThree = $(cardThree).data('left');
-      window.userThree = $(cardThree).data('user');
-      if (userThree === 1) {
-        cardThree.find('img').css({
-          'border': '10px solid #008B00',
-          'width': '150px',
-          'height': '150px'
-        }).animate({
-          'width': '100%',
-          'height': '100%'
-        });
-    } else {
-        cardThree.find('img').css({
-        'border': '10px solid #FF0000',
-        'width': '150px',
-        'height': '150px'
-        }).animate({
-        'width': '100%',
-        'height': '100%'
-        });
-      }      
-      cardThree.draggable('disable');
-      $(this).droppable('disable');
-    }
-  });
-  $('.game-four').droppable({
-    activeClass: 'active-th',
-    hoverClass: 'hover-th',
-    drop: function(event, ui) {
-      var card;
-      card = ui.draggable;
-      $(this).prepend(card);
-      window.topNumFour = $(card).data('top');
-      window.rightNumFour = $(card).data('right');
-      window.bottomNumFour = $(card).data('bottom');
-      window.leftNumFour = $(card).data('left');
-      window.userFour = $(card).data('user');
-      if (userFour === 1) {
-        card.find('img').css({
-          'border': '10px solid #008B00',
-          'width': '150px',
-          'height': '150px'
-        }).animate({
-          'width': '100%',
-          'height': '100%'
-        });
-    } else {
-        card.find('img').css({
-        'border': '10px solid #FF0000',
-        'width': '150px',
-        'height': '150px'
-        }).animate({
-        'width': '100%',
-        'height': '100%'
-        });
-      }      
-      card.draggable('disable');
-      $(this).droppable('disable');
-    }
-  });
-  $('.game-five').droppable({
-    activeClass: 'active-th',
-    hoverClass: 'hover-th',
-    drop: function(event, ui) {
-      var card;
-      card = ui.draggable;
-      $(this).prepend(card);
-      window.topNumFive = $(card).data('top');
-      window.rightNumFive = $(card).data('right');
-      window.bottomNumFive = $(card).data('bottom');
-      window.leftNumFive = $(card).data('left');
-      window.userFive = $(card).data('user');
-      if (userFive === 1) {
-        card.find('img').css({
-          'border': '10px solid #008B00',
-          'width': '150px',
-          'height': '150px'
-        }).animate({
-          'width': '100%',
-          'height': '100%'
-        });
-    } else {
-        card.find('img').css({
-        'border': '10px solid #FF0000',
-        'width': '150px',
-        'height': '150px'
-        }).animate({
-        'width': '100%',
-        'height': '100%'
-        });
-      }      
-      card.draggable('disable');
-      $(this).droppable('disable');
-    }
-  });
-  $('.game-six').droppable({
-    activeClass: 'active-th',
-    hoverClass: 'hover-th',
-    drop: function(event, ui) {
-      var card;
-      card = ui.draggable;
-      $(this).prepend(card);
-      window.topNumSix = $(card).data('top');
-      window.rightNumSix = $(card).data('right');
-      window.bottomNumSix = $(card).data('bottom');
-      window.leftNumSix = $(card).data('left');
-      window.userSix = $(card).data('user');
-      if (userSix === 1) {
-        card.find('img').css({
-          'border': '10px solid #008B00',
-          'width': '150px',
-          'height': '150px'
-        }).animate({
-          'width': '100%',
-          'height': '100%'
-        });
-    } else {
-        card.find('img').css({
-        'border': '10px solid #FF0000',
-        'width': '150px',
-        'height': '150px'
-        }).animate({
-        'width': '100%',
-        'height': '100%'
-        });
-      }      
-      card.draggable('disable');
-      $(this).droppable('disable');
-    }
-  });
-  $('.game-seven').droppable({
-    activeClass: 'active-th',
-    hoverClass: 'hover-th',
-    drop: function(event, ui) {
-      var card;
-      card = ui.draggable;  
-      $(this).prepend(card);
-      window.topNumSeven = $(card).data('top');
-      window.rightNumSeven = $(card).data('right');
-      window.bottomNumSeven = $(card).data('bottom');
-      window.leftNumSeven = $(card).data('left');
-      window.userSeven = $(card).data('user');
-      if (userSeven === 1) {
-        card.find('img').css({
-          'border': '10px solid #008B00',
-          'width': '150px',
-          'height': '150px'
-        }).animate({
-          'width': '100%',
-          'height': '100%'
-        });
-    } else {
-        card.find('img').css({
-        'border': '10px solid #FF0000',
-        'width': '150px',
-        'height': '150px'
-        }).animate({
-        'width': '100%',
-        'height': '100%'
-        });
+      if ($($card).data('user') != right.data('user')) {
+        if ($($card).data('right') > right.data('left')) {
+          if ($(this).data('id') != 2 && $(this).data('id') != 5) {
+            right.data('user', $($card).data('user'));
+          }          
+        }    
       }
-      card.draggable('disable');
-      $(this).droppable('disable');
-    }
-  });
-  $('.game-eight').droppable({
-    activeClass: 'active-th',
-    hoverClass: 'hover-th',
-    drop: function(event, ui) {
-      var card;
-      card = ui.draggable;
-      $(this).prepend(card);
-      window.topNumEight = $(card).data('top');
-      window.rightNumEight = $(card).data('right');
-      window.bottomNumEight = $(card).data('bottom');
-      window.leftNumEight = $(card).data('left');
-      window.userEight = $(card).data('user');
-      if (userEight === 1) {
-        card.find('img').css({
+           
+      if ($($card).data('user') != left.data('user')) {
+        if ($($card).data('left') > left.data('right')) { 
+          if ($(this).data('id') != 3 && $(this).data('id') != 6) {
+            left.data('user', $($card).data('user'));
+          }         
+        }
+      }
+      
+      if ($($card).data('user') != top.data('user')) {
+        if ($($card).data('top') > top.data('bottom')) { 
+          top.data('user', $($card).data('user'));          
+        }
+      }
+      
+      if ($($card).data('user') != bottom.data('user')) {
+        if ($($card).data('bottom') > bottom.data('top')) { 
+          bottom.data('user', $($card).data('user'));          
+        }
+      }
+      
+      var green = function(i) { i.find('img').css({
           'border': '10px solid #008B00',
           'width': '150px',
-          'height': '150px'
+          'height': '150px'          
         }).animate({
           'width': '100%',
-          'height': '100%'
-        });
-    } else {
-        card.find('img').css({
-        'border': '10px solid #FF0000',
-        'width': '150px',
-        'height': '150px'
-        }).animate({
-        'width': '100%',
-        'height': '100%'
-        });
+          'height': '100%'          
+        }); 
       }
-      card.draggable('disable');
-      $(this).droppable('disable');
-    }
-  });
-  return $('.game-nine').droppable({
-    activeClass: 'active-th',
-    hoverClass: 'hover-th',
-    drop: function(event, ui) {
-      var card;
-      card = ui.draggable;
-      $(this).prepend(card);
-      window.topNumNine = $(card).data('top');
-      window.rightNumNine = $(card).data('right');
-      window.bottomNumNine = $(card).data('bottom');
-      window.leftNumNine = $(card).data('left');
-      window.userNine = $(card).data('user');
-      if (userNine === 1) {
-        card.find('img').css({
-          'border': '10px solid #008B00',
+      
+      var red = function(i) { i.find('img').css({
+          'border': '10px solid #FF0000',
           'width': '150px',
-          'height': '150px'
+          'height': '150px'          
         }).animate({
           'width': '100%',
-          'height': '100%'
-        });
-    } else {
-        card.find('img').css({
-        'border': '10px solid #FF0000',
-        'width': '150px',
-        'height': '150px'
-        }).animate({
-        'width': '100%',
-        'height': '100%'
-        });
+          'height': '100%'          
+        }); 
       }
-      card.draggable('disable');
+                  
+      if ($($card).data('user') === 1) {
+        green($card);
+        } else {
+        red($card);
+      }
+       
+      if (right.data('user') === 1) {
+        green(right);
+      } else {
+        red(right);
+      }
+      if (left.data('user') === 1){
+        green(left);
+      } else {
+        red(left);
+      }
+      if (top.data('user') === 1){
+        green(top);
+      } else {
+        red(top);
+      }
+      if (bottom.data('user') === 1){
+        green(bottom);
+      } else {
+        red(bottom);
+      }   
+      
+      q++;
+      
+      if (q % 2 === 0) {
+        $('.triangle-one').css({
+        'border-left':'150px solid #FE2E2E'                      
+        })
+        $('.triangle-two').css({        
+        'border-right':'150px solid #00EE00'        
+        })          
+      }
+      if (q % 2 === 1) {
+        $('.triangle-one').css({        
+        'border-left':'150px solid #00EE00'        
+        })
+        $('.triangle-two').css({         
+        'border-right':'150px solid #FE2E2E'       
+        });          
+      }
+                                  
+      $card.draggable('disable');
       $(this).droppable('disable');
-    }
-  });
+    }      
+  });    
 });
 
-var user = function(){
-  if (rightNumOne > leftNumThree) {
-    alert('1');
-  }
-}
 
-/*
-window.cardOne   = ui.draggable
-window.cardTwo   = ui.draggable
-window.cardThree = ui.draggable
-window.cardFour  = ui.draggable
-window.cardFive  = ui.draggable
-window.cardSix   = ui.draggable
-window.cardSeven = ui.draggable
-window.cardEight = ui.draggable
-window.cardNine  = ui.draggable
-
-if ($(cardOne).data('user') === $(cardThree).data('user')) {
-  return
-} else if ($(cardOne).data('user') > $(cardThree).data('user')) {
-    if (rightNumOne > leftNumThree) {  $(cardThree).data('user', $(cardOne).data('user')) }    
-} else if ($(cardOne).data('user') < $(cardThree).data('user')) {
-    if (rightNumOne < leftNumThree) {  $(cardOne).data('user', $(cardThree).data('user')) }
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

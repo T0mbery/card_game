@@ -39,46 +39,43 @@
 }
 
 
-.ssComp { border: 5px solid #DAA520; }
+.ssComp { 
+  border: 5px solid #DAA520;
+  animation: tada 1.7s 2s 1;
+  box-shadow: 4px 4px 7px rgba(0,0,0,.4)
+}
 
 .choose { border: 5px solid #FFFF00; }
 
-.active-th { background-color: #FFC125; } 
+.active-th { background-color: #F7D358; } 
 .hover-th { background-color: #9ACD32; }
 
 .triangle-one { 
   height: 0; 
   width: 0; 
-  border-top: 15px solid #00FF00; 
-  border-left: 15px solid transparent; 
-  border-right: 15px solid transparent; 
-  display: inline-block; 
-  margin-left: 380px; 
+  border-top: 430px solid transparent; 
+  border-left: 150px solid #00EE00; 
+  border-bottom: 430px solid transparent;     
+  float: left;
+  margin-left: 15px;
+  position: fixed;      
  }
 
 .triangle-two { 
   height: 0; 
   width: 0; 
-  border-top: 15px solid #FF0000; 
-  border-left: 15px solid transparent; 
-  border-right: 15px solid transparent; 
-  display: inline-block; 
-  margin-left: 1015px; 
+  border-top: 430px solid transparent; 
+  border-right: 150px solid #FE2E2E; 
+  border-bottom: 430px solid transparent;     
+  float: right;
+  position: fixed;
+  margin-left: 1688px;  
  }
 
-.game-one { height: 275.7px; width: 275.3px; float: left; border: 1px solid black; }
-.game-two { height: 275.7px; width: 275.3px; float: right; border: 1px solid black; }
-.game-three { height: 275.7px; width: 275.3px; float: right; border: 1px solid black; }
-.game-four { height: 275.7px; width: 275.3px; float: right; border: 1px solid black; }
-.game-five { height: 275.7px; width: 275.3px; float: right; border: 1px solid black; }
-.game-six { height: 275.7px; width: 275.3px; float: right; border: 1px solid black; }
-.game-seven { height: 275.7px; width: 275.3px; float: right; border: 1px solid black; }
-.game-eight { height: 275.7px; width: 275.3px; float: right; border: 1px solid black; }
-.game-nine { height: 275.7px; width: 275.3px; float: right; border: 1px solid black; }
+.game-field { height: 275.7px; width: 275.3px; float: left; border: 1px solid black; }
 
-.new_game { height: 275.7px; width: 275.3px; margin-left: 44%; background-color: red; }
 
-@-moz-keyframes tada {
+/* @-moz-keyframes tada {
   from {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -103,7 +100,7 @@
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-}
+} */
 
 
 
