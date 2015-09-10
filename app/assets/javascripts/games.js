@@ -12,14 +12,17 @@ $(document).ready(function() {
       'border': '5px solid #00FF00'
     });
   });
-  $('.ss, .ssComp').draggable({
-    helper: 'clone',
-    revert: 'invalid'
-  });  
   
-  var q  = 1;
+  window.q  = 1;
+  
   var u1 = 0;
   var u2 = 0;
+  
+  $('.ss').draggable({
+    helper: 'clone',
+    revert: 'invalid'
+  });
+  
     
   $('.game-field').droppable({
     activeClass: 'active-th',
@@ -166,9 +169,25 @@ $(document).ready(function() {
         } else {
           setTimeout("alert('Победил USER 2')", 2300);
         }
-      }        
+      }
+      
+      if ( q % 2 === 0) {  
+        $('.ssComp').draggable({
+          helper: 'clone',
+          revert: 'invalid',
+          cancel:'.ss'
+        });
+      } 
+      
+      if ( q % 2 === 1) {  
+        $('.ss').draggable({
+          helper: 'clone',
+          revert: 'invalid',
+          cancel:'.ssComp'
+        });
+      }            
     }         
-  });      
+  });        
 });
 
 
