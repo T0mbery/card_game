@@ -13,8 +13,7 @@ $(document).ready(function() {
     });
   });
   
-  window.q  = 1;
-  
+  var q  = 1;  
   var u1 = 0;
   var u2 = 0;
   
