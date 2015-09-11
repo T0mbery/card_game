@@ -16,3 +16,7 @@
 /tmp
 
 *.rb~
+*.scss~
+*.js~
+*.yml~*
+*.coffee~
