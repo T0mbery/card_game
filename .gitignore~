@@ -20,3 +20,7 @@
 *.js~
 *.yml~*
 *.coffee~
+Gemfile~
+Rakefile~
+.gitignore~
+
