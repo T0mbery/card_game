@@ -1,5 +1,0 @@
-#encoding: utf-8
-#!/usr/bin/env ruby
-require_relative '../config/boot'
-require 'rake'
-Rake.application.run
