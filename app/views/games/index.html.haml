@@ -1,11 +1,11 @@
 %br
 .triangle-one
 
-.gameUser  
+.game-user  
   - @cart.line_items.each do |item|    
     %p.ss{"data-top" => item.card.top_number, "data-right" => item.card.right_number, "data-bottom" => item.card.bottom_number, "data-left" => item.card.left_number, "data-user" => "1"}= image_tag item.card.image.url(:thumb)       
   
-.gamePlayer
+.game-player
   - @card_game.each do |item|    
     %p.ssComp{"data-top" => item.top_number, "data-right" => item.right_number, "data-bottom" => item.bottom_number, "data-left" => item.left_number, "data-user" => "2"}= image_tag item.image.url(:thumb)
 

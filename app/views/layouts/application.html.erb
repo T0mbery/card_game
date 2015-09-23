@@ -10,13 +10,13 @@
     
         <body class="body-main">
 
-    <div class="sessionInfo">
+    <div class="session-info">
       <% if user_signed_in? %>             
         Вы вошли как <%= current_user.name.capitalize %>.
         <%= link_to "Выход", destroy_user_session_path, :method => :delete %>   
-         <h2 class="headerOne"><%= link_to "Карты", cards_path %></h2>
-         <h2 class="headerTwo"><%= link_to "Правила", home_show_path %></h2>
-         <h2 class="headerThree"><%= link_to "Игра", games_path %></h2>
+         <h2 class="header-one"><%= link_to "Карты", cards_path %></h2>
+         <h2 class="header-two"><%= link_to "Правила", home_show_path %></h2>
+         <h2 class="header-three"><%= link_to "Игра", games_path %></h2>
                
       <% else %>
         <%= link_to "Зарегистрироваться", new_user_registration_path %> или <%= link_to "Войти", new_user_session_path %>
@@ -30,13 +30,13 @@
   
     <body class="body">
 
-    <div class="sessionInfo">
+    <div class="session-info">
       <% if user_signed_in? %>             
         Вы вошли как <%= current_user.name.capitalize %>.
         <%= link_to "Выход", destroy_user_session_path, :method => :delete %>    
-         <h2 class="headerOne"><%= link_to "Карты", cards_path %></h2>
-         <h2 class="headerTwo"><%= link_to "Правила", home_show_path %></h2>
-         <h2 class="headerThree"><%= link_to "Игра", games_path %></h2>
+         <h2 class="header-one"><%= link_to "Карты", cards_path %></h2>
+         <h2 class="header-two"><%= link_to "Правила", home_show_path %></h2>
+         <h2 class="header-three"><%= link_to "Игра", games_path %></h2>
                
       <% else %>
         <%= link_to "Зарегистрироваться", new_user_registration_path %> или <%= link_to "Войти", new_user_session_path %>

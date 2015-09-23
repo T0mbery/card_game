@@ -44,14 +44,12 @@ class LineItemsController < ApplicationController
   end
 
   private
-    def set_line_item
-      unless @line_item = LineItem.find(params[:id])
-        render_404
-      end
+  
+  def set_line_item
+    unless @line_item = LineItem.find(params[:id])
+      render_404
     end
-
-    def line_item_params
-      params.require(:line_item).permit(:card_id, :cart_id)
-    end              
+  end              
     
 end
+

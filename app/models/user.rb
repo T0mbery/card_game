@@ -1,10 +1,10 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+
+  has_one :cart
+  
+  validates :balance, numericality: { greater_than_or_equal_to: 0 }
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         
-  validates :balance, numericality: { greater_than_or_equal_to: 0 }
-         
-  has_one :cart       
+                
 end

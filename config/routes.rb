@@ -12,8 +12,6 @@ CardGame::Application.routes.draw do
   resources :line_items
    
   
-  devise_for :users    
-
-  get ':controller(/:action(/:id))(.:format)'
+  devise_for :users 
 
 end

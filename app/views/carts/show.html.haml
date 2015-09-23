@@ -11,8 +11,8 @@
   = link_to 'Набрать Карту', cards_path, class: "btn btn-warning"
   
 - if user_signed_in?
-  .moneyShow
-    %h3.moneyOne
+  .money-show
+    %h3.money-one
       У Вас: #{session[:money]} монет
       
-%p.gameButton= link_to "ИГРАТЬ", games_path, class: "btn btn-default"
+%p.game-button= link_to "ИГРАТЬ", games_path, class: "btn btn-default"
