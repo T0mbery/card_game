@@ -15,4 +15,9 @@
     %h3.money-one
       У Вас: #{session[:money]} монет
       
-%p.game-button= link_to "ИГРАТЬ", games_path, class: "btn btn-default"
+
+%form.game-button-pos{:action => "/games/", :method => "get"}
+  %input.game-button{:type => "submit", :value => "Играть"}
+
+
+
