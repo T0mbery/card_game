@@ -1,7 +1,4 @@
-User.create!([
-  {email: "user@ya.ru", encrypted_password: "$2a$10$Fwt8s6DQkv7ZhZMGK4pQUOddFDyQ7G34fHSwxY3qmOAKniNHtZLki", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 4, current_sign_in_at: "2015-09-22 11:52:59", last_sign_in_at: "2015-09-22 11:21:17", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: false, name: "andrey", balance: 300},
-  {email: "admin@ya.ru", encrypted_password: "$2a$10$lojixqYDa3fjgZekxWz3EeJmm4n5S5XfFWguY7C6JvzlyTl8kN6Uq", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2015-09-22 13:49:03", last_sign_in_at: "2015-09-21 14:30:41", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: true, name: "admin", balance: 2100}
-])
+#encoding: utf-8
 Card.create!([
   {price: 600, name: "Ward", description: "Вард. Школьный друг Сквала, также состоит в его команде. Основное оружее: Двуручный Мечь.", left_number: 8, top_number: 10, right_number: 7, bottom_number: 2, lvl: 10, image_file_name: "1365667781.jpg", image_content_type: "image/jpeg", image_file_size: 40238, image_updated_at: "2015-08-18 09:28:50"},
   {price: 600, name: "Selphie", description: "Селфи. Школьная подруга Сквала, также состоит в его команде. Основное оружее: Кнут.", left_number: 4, top_number: 10, right_number: 8, bottom_number: 6, lvl: 10, image_file_name: "1365660259.jpg", image_content_type: "image/jpeg", image_file_size: 41105, image_updated_at: "2015-08-18 09:30:10"},
