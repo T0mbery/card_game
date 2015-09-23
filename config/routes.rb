@@ -9,9 +9,10 @@ CardGame::Application.routes.draw do
   resources :games   
   resources :cards
   resources :carts
-  resources :line_items
-   
+  resources :line_items   
   
-  devise_for :users 
+  devise_for :users
+  
+  get ':controller(/:action(/:id))(.:format)' 
 
 end
