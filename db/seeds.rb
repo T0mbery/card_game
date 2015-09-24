@@ -1,9 +1,9 @@
 #encoding: utf-8
 User.create([
-  {email: "admin@ya.ru", encrypted_password: "$2a$10$lojixqYDa3fjgZekxWz3EeJmm4n5S5XfFWguY7C6JvzlyTl8kN6Uq", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 7, current_sign_in_at: "2015-09-23 09:28:55", last_sign_in_at: "2015-09-23 09:17:42", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: true, name: "admin", balance: 2100},
-  {email: "user@ya.ru", encrypted_password: "$2a$10$Fwt8s6DQkv7ZhZMGK4pQUOddFDyQ7G34fHSwxY3qmOAKniNHtZLki", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 11, current_sign_in_at: "2015-09-23 09:39:13", last_sign_in_at: "2015-09-23 09:15:28", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: false, name: "andrey", balance: 600}
+  {email: "admin@ya.ru", encrypted_password: "$2a$10$lojixqYDa3fjgZekxWz3EeJmm4n5S5XfFWguY7C6JvzlyTl8kN6Uq", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 9, current_sign_in_at: "2015-09-23 17:54:29", last_sign_in_at: "2015-09-23 09:47:48", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: true, name: "admin", balance: 2100},
+  {email: "user@ya.ru", encrypted_password: "$2a$10$Fwt8s6DQkv7ZhZMGK4pQUOddFDyQ7G34fHSwxY3qmOAKniNHtZLki", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 15, current_sign_in_at: "2015-09-23 18:22:44", last_sign_in_at: "2015-09-23 18:08:57", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: false, name: "andrey", balance: 1500}
 ])
-Card.create!([
+Card.create([
   {price: 600, name: "Ward", description: "Вард. Школьный друг Сквала, также состоит в его команде. Основное оружее: Двуручный Мечь.", left_number: 8, top_number: 10, right_number: 7, bottom_number: 2, lvl: 10, image_file_name: "1365667781.jpg", image_content_type: "image/jpeg", image_file_size: 40238, image_updated_at: "2015-08-18 09:28:50"},
   {price: 600, name: "Selphie", description: "Селфи. Школьная подруга Сквала, также состоит в его команде. Основное оружее: Кнут.", left_number: 4, top_number: 10, right_number: 8, bottom_number: 6, lvl: 10, image_file_name: "1365660259.jpg", image_content_type: "image/jpeg", image_file_size: 41105, image_updated_at: "2015-08-18 09:30:10"},
   {price: 600, name: "Kiros", description: "Кирос. Лучший друг Лагуны, также состоит в его команде. Основное оружее: Мечь. ", left_number: 10, top_number: 6, right_number: 7, bottom_number: 6, lvl: 10, image_file_name: "1365661344.jpg", image_content_type: "image/jpeg", image_file_size: 39191, image_updated_at: "2015-08-18 09:31:11"},
@@ -72,6 +72,10 @@ Card.create!([
   {price: 300, name: "Ultima Weapon", description: "Ультима. Крылатый монстр с легендарным мечём \"Крилиз\"", left_number: 8, top_number: 7, right_number: 7, bottom_number: 2, lvl: 7, image_file_name: "1365606131.jpg", image_content_type: "image/jpeg", image_file_size: 40927, image_updated_at: "2015-08-18 10:06:41"}
 ])
 Cart.create!([
+  {user_id: 6},
+  {user_id: 6},
+  {user_id: 6},
+  {user_id: 6},
   {user_id: 6}
 ])
 LineItem.create!([
@@ -79,5 +83,11 @@ LineItem.create!([
   {card_id: 3, cart_id: 306},
   {card_id: 64, cart_id: 306},
   {card_id: 65, cart_id: 306},
-  {card_id: 57, cart_id: 306}
+  {card_id: 57, cart_id: 306},
+  {card_id: 1, cart_id: 307},
+  {card_id: 1, cart_id: 309},
+  {card_id: 2, cart_id: 309},
+  {card_id: 1, cart_id: 310},
+  {card_id: 62, cart_id: 309},
+  {card_id: 1, cart_id: 312}
 ])
