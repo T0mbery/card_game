@@ -1,8 +1,6 @@
 
 .form-inputs-in {
     label {
-    float: left;    
-    text-align: right;
     margin: 2px 10px;    
     width: 130px; }
     
@@ -19,6 +17,9 @@
     width: 300px;    
   }
   
+.input-form-one {
+  width: 20%;
+}
  
 .form-actions    { margin-left: 68px; }
 .form-actionsin { margin-left: 27px; }
