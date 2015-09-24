@@ -2,10 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.form_name { 
-  width: 300px; 
-  margin: 2px 28px; 
- }
+.form_name { margin: 2px 28px; }
  
 .form_image { margin: 2px 39px; }
 
@@ -13,26 +10,23 @@
 
 .form_image1 { margin-left: 127px; }
 
-.form_price { 
-  width: 120px; 
-  margin: 2px 66px; 
- }
+#card_name, #card_price, #card_description { width: 320px; }
+
+.form_price { margin: 2px 69px; }
+
+#card_left_number, #card_top_number, #card_right_number, #card_bottom_number { width: 65px; }
  
 .form_lvl { 
   margin: 2px 76px; 
   text-align: right; 
  }
  
-.form_description { 
-  width: 300px; 
-  text-align: right; 
-  margin: 2px 26px; 
- } 
+.form_description { margin: 2px 25px; } 
 
-.form_number { 
-  width: 60px; 
-  margin: 2px 55px; 
- }
+.form_number { margin: 2px 11px; }
+
+.form_number_toprig { margin: 2px 3px; }
+
 .cards { 
   font-family: 'Lato', sans-serif; 
   font-weight: bold; 
