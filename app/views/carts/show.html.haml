@@ -2,7 +2,7 @@
 %p#alert= alert
       
 .cart
-  = link_to 'Начать набор коллоды заного', cart_path(@cart), :method => :delete, data: {confirm: "Вы уверены?"}, class: "btn btn-info"
+  = link_to "Сбросить колоду и <br/> Обновить счёт".html_safe, cart_path(@cart), :method => :delete, data: {confirm: "Вы уверены?"}, class: "btn btn-info"
   %br
   %br
 
@@ -18,6 +18,5 @@
 
 %form.game-button-pos{:action => "/games/", :method => "get"}
   %input.game-button{:type => "submit", :value => "Играть"}
-
 
 

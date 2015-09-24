@@ -429,8 +429,14 @@ $(document).ready(function() {
           } else {
             alert('Победил Computer');
           }
-        } 
-      }, 4000);           
+          
+          if (confirm("Хотите сыграть ещё раз?")) {
+	            window.location = '../games';
+	        } else {
+	            window.location = '../cards';
+	        }          
+        }                 
+      }, 4000);          
     }         
   });        
 });

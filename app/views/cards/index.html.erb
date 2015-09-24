@@ -1,4 +1,4 @@
-<div class="card">  
+<div>  
   <h1 class="cards"> КАРТЫ: </h1>
 </div>
 
@@ -9,6 +9,9 @@
 <% if user_signed_in? %>
   <div class="money">    
     <h3 class="money-one"> У Вас: <%= current_user[:balance] %> монет <h3>
+  </div>
+  <div class="restart-game">
+    <%= link_to "Сбросить колоду и <br/> Обновить счёт".html_safe, cart_path(@cart), :method => :delete, data: {confirm: "Вы уверены?"}, class: "btn btn-info" %>
   </div>
 <% end %>
 

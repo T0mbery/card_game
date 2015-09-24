@@ -1,7 +1,9 @@
 class CardsController < ApplicationController
 
+  include CurrentCart
   before_filter :authenticate_user!
   before_filter :find_card,      only: [:show, :edit, :update, :destroy]
+  before_action :set_cart,       only: [:index]
   before_filter :check_if_admin, only: [:edit, :update, :destroy, :new, :create]  
   
   def index
@@ -68,6 +70,7 @@ class CardsController < ApplicationController
     @card = Card.where(id: params[:id]).first
     render_404 unless @card
   end
+
       
 end
 
