@@ -6,7 +6,6 @@ if RUBY_VERSION =~ /1.9.3/ # assuming you're running Ruby ~1.9
 end
 
 gem 'rails', '4.0.0'
-gem 'rails_12factor'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'simple_form', git: 'git://github.com/plataformatec/simple_form'
@@ -27,6 +26,7 @@ group :development do
 end
 
 group :production do
+  gem 'rails_12factor'
   gem 'pg'
 end
 
