@@ -5,11 +5,14 @@
 .game-user { 
   float: left; 
   margin-left: 315px;
+  position: absolute;
 }
 
 .game-player { 
-  float: right; 
-  margin-right: 330px;  
+  float: right;   
+  text-align: right;
+  position: absolute;
+  margin-left: 1363px;  
 }
 
 #alert {  
@@ -26,20 +29,20 @@
   margin: 0px auto auto 503px;
   border: 4px solid black; 
   width: 834px;
-  height: 834px;  
+  height: 834px; 
 }
 
 .ss { 
   border: 5px solid #DAA520;
   animation: tada 1.7s 2s 1;
-  box-shadow: 4px 4px 7px rgba(0,0,0,.4)  
+  box-shadow: 4px 4px 7px rgba(0,0,0,.4);  
 }
 
 
 .ssComp { 
   border: 5px solid #DAA520;
   animation: tada 1.7s 2s 1;
-  box-shadow: 4px 4px 7px rgba(0,0,0,.4)
+  box-shadow: 4px 4px 7px rgba(0,0,0,.4);
 }
 
 .choose { border: 5px solid #FFFF00; }
@@ -54,8 +57,7 @@
   border-left: 150px solid #00EE00; 
   border-bottom: 430px solid transparent;     
   float: left;
-  margin-left: 15px;
-  position: fixed;      
+  margin-left: 15px;      
  }
 
 .triangle-two { 
@@ -65,11 +67,42 @@
   border-right: 150px solid #FE2E2E; 
   border-bottom: 430px solid transparent;     
   float: right;
-  position: fixed;
-  margin-left: 1688px;  
+  text-align: right; 
+  margin-right: 15px;  
  }
 
 .game-field { height: 275.7px; width: 275.3px; float: left; border: 1px solid black; }
+
+@media only screen and (max-width: 1480px) {
+  .game {
+    width: 600px;
+    height: 600px;
+    margin-left: 300px;
+  }
+  .game-field {
+    width: 197.2px;
+    height: 197.2px;
+  }
+  .game-player {
+    margin-left: 950px;
+    text-align: left;
+  }
+  .game-user {
+    margin-left: 90px;
+  }
+  .triangle-one {
+    border-top: 170px solid transparent; 
+    border-left: 50px solid #00EE00; 
+    border-bottom: 170px solid transparent;
+  }
+  .triangle-two {
+    border-top: 170px solid transparent; 
+    border-right: 50px solid #FE2E2E; 
+    border-bottom: 170px solid transparent;
+  }
+}
+
+
 
 
 /* @-moz-keyframes tada {

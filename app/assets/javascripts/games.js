@@ -398,21 +398,39 @@ $(document).ready(function() {
  // ------------------------------------------------------------------------------------- //  
             
       if (q % 2 === 0) {
+        if (window.matchMedia("(max-width: 1480px)").matches) {
+          $('.triangle-one').css({
+          'border-left':'50px solid #FE2E2E'                      
+          })
+          $('.triangle-two').css({        
+          'border-right':'50px solid #00EE00'        
+          });          
+        } else {   
         $('.triangle-one').css({
         'border-left':'150px solid #FE2E2E'                      
         })
         $('.triangle-two').css({        
         'border-right':'150px solid #00EE00'        
-        })          
+        })
+        }          
       }
       setTimeout(function(){
         if (q % 2 === 1) {
-          $('.triangle-one').css({        
-          'border-left':'150px solid #00EE00'        
-          })
-          $('.triangle-two').css({         
-          'border-right':'150px solid #FE2E2E'       
-          });          
+          if (window.matchMedia("(max-width: 1480px)").matches) {
+            $('.triangle-one').css({        
+            'border-left':'50px solid #00EE00'        
+            })
+            $('.triangle-two').css({         
+            'border-right':'50px solid #FE2E2E'       
+            });
+          } else {
+            $('.triangle-one').css({        
+            'border-left':'150px solid #00EE00'        
+            })
+            $('.triangle-two').css({         
+            'border-right':'150px solid #FE2E2E'       
+            });
+          }         
         }
       }, 5000);
                                   
